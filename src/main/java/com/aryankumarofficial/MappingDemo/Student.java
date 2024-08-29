@@ -2,7 +2,7 @@ package com.aryankumarofficial.MappingDemo;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-
+import javax.persistence.OneToOne;
 
 @Entity
 public class Student {
@@ -11,6 +11,16 @@ public class Student {
 	private int rollNo;
 	private String name;
 	private int marks;
+	@OneToOne
+	private Laptop laptop;
+
+	public Laptop getLaptop() {
+		return laptop;
+	}
+
+	public void setLaptop(Laptop laptop) {
+		this.laptop = laptop;
+	}
 
 	public int getRollNo() {
 		return rollNo;
