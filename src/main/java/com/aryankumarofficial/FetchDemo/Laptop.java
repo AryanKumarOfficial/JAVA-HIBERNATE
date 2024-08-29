@@ -46,4 +46,9 @@ public class Laptop {
 		this.alien = alien;
 	}
 
+	@Override
+	public String toString() {
+		return "Laptop [lid=" + lid + ", brand=" + brand + ", price=" + price + ", alien=" + alien + "]";
+	}
+
 }
