@@ -25,6 +25,8 @@ public class App {
 		student.setMarks(50);
 		student.getLaptops().add(laptop);
 
+		laptop.getStudents().add(student);
+
 		Configuration config = new Configuration().configure().addAnnotatedClass(Student.class)
 				.addAnnotatedClass(Laptop.class);
 		ServiceRegistry registry = new ServiceRegistryBuilder().applySettings(config.getProperties())
