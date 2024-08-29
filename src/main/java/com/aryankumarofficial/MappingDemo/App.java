@@ -23,7 +23,7 @@ public class App {
 		student.setRollNo(1058);
 		student.setName("Aryan");
 		student.setMarks(50);
-		student.setLaptop(laptop);
+		student.getLaptops().add(laptop);
 
 		Configuration config = new Configuration().configure().addAnnotatedClass(Student.class)
 				.addAnnotatedClass(Laptop.class);

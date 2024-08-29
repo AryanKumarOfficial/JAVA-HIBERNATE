@@ -1,8 +1,11 @@
 package com.aryankumarofficial.MappingDemo;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Student {
@@ -11,15 +14,15 @@ public class Student {
 	private int rollNo;
 	private String name;
 	private int marks;
-	@OneToOne
-	private Laptop laptop;
+	@OneToMany
+	private List<Laptop> laptops = new ArrayList<Laptop>();
 
-	public Laptop getLaptop() {
-		return laptop;
+	public List<Laptop> getLaptops() {
+		return laptops;
 	}
 
-	public void setLaptop(Laptop laptop) {
-		this.laptop = laptop;
+	public void setLaptops(List<Laptop> laptops) {
+		this.laptops = laptops;
 	}
 
 	public int getRollNo() {
