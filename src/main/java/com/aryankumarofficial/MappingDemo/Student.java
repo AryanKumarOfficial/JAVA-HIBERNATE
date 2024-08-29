@@ -14,7 +14,7 @@ public class Student {
 	private int rollNo;
 	private String name;
 	private int marks;
-	@OneToMany
+	@OneToMany(mappedBy = "student")
 	private List<Laptop> laptops = new ArrayList<Laptop>();
 
 	public List<Laptop> getLaptops() {
