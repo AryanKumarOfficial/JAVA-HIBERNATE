@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
@@ -13,7 +14,7 @@ public class Alien {
 	@Id
 	private int aid;
 	private String aname;
-	@OneToMany
+	@OneToMany(mappedBy = "alien", fetch = FetchType.EAGER)
 	private Collection<Laptop> laptops = new ArrayList<Laptop>();
 
 	public int getAid() {
